@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: 檢出代碼
       uses: actions/checkout@v6
-      wtih:
+      with:
         token: ${{ secrets.GIT_TOKEN }}
     - name: 進行修改
       run: |
