@@ -9,11 +9,11 @@ jobs:
 
     steps:
     - name: 檢出代碼
-      uses: actions/checkout@v2
+      uses: actions/checkout@v6
 
     - name: 進行修改
       run: |
-        echo "Update on $(date)" >> update.log
+        echo "Update on $(date)" >> update
         # 你可以在這裡添加更多自動化變更的指令
 
     - name: 提交變更
