@@ -10,7 +10,8 @@ jobs:
     steps:
     - name: 檢出代碼
       uses: actions/checkout@v6
-
+      wtih:
+        token: ${{ secrets.GIT_TOKEN }}
     - name: 進行修改
       run: |
         echo "Update on $(date)" >> update
@@ -24,6 +25,4 @@ jobs:
         git commit -m "Automated commit on $(date)"
     
     - name: 推送代碼
-      env:
-        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
       run: git push origin main
